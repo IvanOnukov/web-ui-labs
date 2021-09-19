@@ -66,7 +66,7 @@
         </ul>
     </div>
 
-    <!--доделать-->>
+    <!--доделать-->
     <div>
         <p>9. ссылку без href;</p>
        <a target="_blank"  > сылка </a>
@@ -74,7 +74,7 @@
 
     <div>
         <p>10 ссылку с пустым href</p>
-       <a type="#"> сылка  </a>
+       <a href="#"> сылка  </a>
     </div>
 
     <div>
@@ -83,6 +83,39 @@
     </div>
 
     
+    <div>
+        <p>12. запрещенную для индексации поисковиками</p>
+       <a target="_blank" rel="nofollow" href="http://example.com" ><noindex> сылка </noindex></a>
+    </div>
+
+    <div>
+        <p>13. контекстную в тексте абзаца</p>
+       
+    </div>
+
+    <div>
+        <p>14. ссылку-изображение;</p>
+        <a target="_blank" href="https://www.kubsu.ru/"> <img src="https://www.kubsu.ru/sites/all/themes/portal_kubsu/logo.png" alt="" style="width: 100px"> </a>
+    </div>
+
+    
+    <div>
+        <p>15. ссылки из прямоугольных и круглых областей картинки (HTML-тег map)</p>
+
+        <img src="img/image.jpg" alt="" style="width: 500px" usemap="#Navigation">
+        
+        <map name="#Navigation">
+
+            <area shape="circle" coords="1101 825 255" target="_blank" href="https://hr.wikipedia.org/wiki/Kritosjemenja%C4%8De" alt="">
+
+
+        </map>
+
+    </div>
+
+    
+
+
     
 
 </body>
