@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>lab№1</title>
+</head>
+<body>
+
+    <div>
+        <div>
+            <p id="link"> 1. Обсольтная сылка example.com (http)  </p>
+        </div>
+        <p><a href="http://example.com"> Главная </a></p>
+    </div>
+
+    <div>
+        <div>
+            <p> 2. Обсольтная сылка example.com (https) </p>
+        </div>
+        <p><a href="https://example.com"> Главная </a></p>
+    </div>
+    
+    <div>
+        <div>
+            <p> 3. Сылка на ftp (без авторизации) </p>
+        </div>
+        
+        <p><a href="ftp://test:password@example.com/myfile.zip/"> myfile без aвторизации </a></p>
+    </div>
+    
+    <div>
+        <div>
+            <p> 4. Сылка на ftp(с авторизацией)  </p>
+        </div>
+            <p><a href="ftp://user:password@example.com/myfile.zip/"> myfile c авторизацией </a></p>
+    </div>
+    
+    <div>
+        <p> 5. ссылку на фрагмент страницы некоторого сайта </p>
+        <div>
+            <a target="_blank " href="https://www.kubsu.ru/ru/fktipm#region-page-bottom" > сылка  </a>
+        </div>
+    </div>
+
+
+    <div>
+        <p>6. ссылку на фрагмент текущей страницы </p>
+        <a href="#link">сылка на обьект текущей страницы </a> 
+    </div>
+
+    <div>
+        <p> 7.ссылку с двумя параметрами в URL (UTM-метки) </p>
+        <div>
+            <a target="_blank " href="https://www.kubsu.ru/ru/fktipm?utm_sourse=yandex&utm_medium=cpc" > сылка  </a>
+        </div>
+    </div>
+
+    <div>
+        <p>8. список ссылок основной навигации сайта с подписями title</p>
+        <ul>
+            <li><a target="_blank" href="https://www.w3schools.com/" title="main page">  главная страница</a></li>
+            <li><a target="_blank" href="https://www.w3schools.com/html/default.asp" title="HTML tutorial home">  изучение HTML </a></li>
+            <li><a target="_blank" href="https://www.w3schools.com/css/default.asp" title="CSS tutorial home">  изучение CSS </a></li>           
+        </ul>
+    </div>
+
+    <!--доделать-->>
+    <div>
+        <p>9. ссылку без href;</p>
+       <a target="_blank"  > сылка </a>
+    </div>
+
+    <div>
+        <p>10 ссылку с пустым href</p>
+       <a type="#"> сылка  </a>
+    </div>
+
+    <div>
+        <p>11. ссылку, по которой запрещен переход поисковикам</p>
+       <a target="_blank"  rel="nofollow" href="http://example.com" > сылка  </a>
+    </div>
+
+    
+    
+
+</body>
+</html>
