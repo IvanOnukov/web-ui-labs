@@ -1,0 +1,104 @@
+*{
+    margin 0;
+    padding: 0;
+}
+
+body{
+    background-color: black;
+    height: 100%;
+}
+
+/*
+.conteiner-head{
+    max-width: 960;
+}
+*/
+header{
+    width: 960px;
+    max-width: 960px;
+    background-color: #8B0000;
+    margin: 0 auto;
+    padding: 0px 0px;
+    height: 70px;
+    box-sizing: border-box;
+}
+
+.content-head h1{
+    display: flex;
+    align-items: center;
+    margin-left: 45%;   
+}
+
+.logo-head img{
+    float: left;
+    width: 101px
+    
+}
+
+
+
+/*редоктирование текста*/
+
+.container{
+    width: 960px;
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+.menu-top{
+    display: inline-block;
+}
+
+p, h1{
+    color: cornsilk;
+}
+
+a{
+   color: darkorange; 
+}
+
+.content p{
+    width: 960px;
+    margin: 0 auto;   
+}
+
+
+
+/*редоктирование таблицы*/
+
+.posit-table{
+    width: 960px;
+    margin: 0 auto;
+    
+}
+
+.table-place {
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    /*margin-bottom: 20px;*/
+}
+
+th {
+    background-color: rgb(3, 89, 3);
+    padding: 5px;
+}
+
+td {
+    padding: 10px;
+    background-color: rgb(145, 11, 11);
+}
+
+fieldset{
+    background-color: #2b0b00;
+    width: 960px;
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+footer{
+    width: 960px;
+    max-width: 960px;
+    background-color: #8B0000;
+    margin: 0 auto;
+}
