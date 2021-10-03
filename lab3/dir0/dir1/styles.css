@@ -9,6 +9,8 @@ body{
     height: 100%;
 }
 
+
+
 header{
     
     
@@ -33,6 +35,10 @@ header p{
 .logo-img{
     width: 50px
 }
+
+
+
+/*редоктирование текста*/
 
 .container{
     display: flex;
@@ -140,9 +146,12 @@ footer{
         background-color: #2b0b00;
         max-width: 768px;
         margin: 0 auto;
-    }  
+    }
+    
  
+    
 }
+
 
 @media screen  and (min-width: 1200px) {
     
@@ -155,7 +164,9 @@ footer{
         flex-wrap: wrap;
         justify-content: center;
     }
+    
    
+    
     .logo-head{
         max-width: 100%
     }
@@ -172,5 +183,6 @@ footer{
         max-width: 1200px;
         margin: 0 auto;
         
-    }    
+    }
+       
 }
