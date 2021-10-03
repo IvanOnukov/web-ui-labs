@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>lab№3</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header>    
+        <div class="content-head">
+            <div class="logo-head"></div>
+                <a href="index.html">
+                     <img class="logo-img" src="img/logo.jpg" alt="not load logo">
+                </a>
+            </div>
+            <div>
+                <p class="block-text">Millenium</p>
+            </div>
+        </div>      
+    </header>
+
+
+        <div class="crossline">
+            <div class="left-line">
+            </div>
+            <div style="text-align: center;">
+                <p>Блок навигации</p>
+            </div>
+            <div class="right-line">
+            </div>
+        </div>
+        <div class="container ">
+            <nav>
+                <ul>
+                    <li><a href="#">Пункт меню 1</a></li>
+                    <li><a href="#">Пункт меню 2</a></li>
+                    <li><a href="#">Пункт меню 3</a></li>
+                </ul>
+            </nav>
+        </div>
+        
+        <div class="crossline">
+            <div class="left-line">
+            </div>
+            <div style="text-align: center;">
+                <p>Блок ссылок</p>
+            </div>
+            <div class="right-line">
+            </div>
+        </div>
+        
+        
+            <div class="container">
+                <ol>
+                    <li class="content"><p>Абсолютную гиперссылку на главную страницу сайта example.com: <a target="blank" href="http://example.com/">example.com</a></p></li>
+                    <li class="content" ><p>Абсолютную на главную сайта example.com в протоколе https: <a target="blank" href="https://example.com/">example.com</a></p></li>
+                    <li class="content"><p>Ссылку на файл на сервере FTP без авторизации: <a target="blank" href="ftp://example.com/myfile.zip">myFile.zip</a></p></li>
+                    <li class="content"><p>Ссылку на файл на сервере FTP с авторизацией: <a target="blank" href="ftp://user:password@example.com/myfile.zip">myFile.zip</a></p></li>
+                    <li class="content"><p>Ссылку на фрагмент страницы некоторого сайта:  <a target="blank" href="scnd.html#text">Ссылка</a></p></li>
+                    <li class="content"><p>Ссылку на фрагмент текущей страницы:  <a target="blank" href="index.html#last">Ссылка</a></p></li>
+                    <li class="content"><p>Ссылку с двумя параметрами в url:  <a target="blank" href="https://www.kubsu.ru/ru/fktipm?utm_sourse=yandex&utm_medium=cpc">Ссылка</a></p></li>
+                    <li class="content"><p>Список ссылок основной навигации сайта с подписями title:</p>
+                    <ul class="content">
+                        <li><a target="blank" href="https://learn.javascript.ru/" title="Главная страница">Главная</a></li>
+                        <li><a target="blank" href="https://learn.javascript.ru/courses" title="Страница с курсами">Курсы</a></li>
+                        <li><a target="blank" href="https://javascript.ru/forum/" title="Страница форума">Форум</a></li>
+                    </ul></li>
+                   
+                    <li class="content"><p>Ссылка без href: <a>Ссылка</a></p></li>
+                    <li class="content"><p>Ссылка с пустым href: <a href="">Ссылка</a></p></li>
+                    <li class="content"><p>Ссылка, по которой запрещен переход поисковикам: <a target="blank" rel="nofollow" href="http://example.com">Ссылка</a></p></li>
+                    <li class="content"><p>Ссылка, запрещенная для индексации поисковиками: <a target="blank" href="http://example.com"><!--noindex-->Ссылка<!--/noindex--></a></p></li>
+                    <li class="content"><p>Находящаяся в теле абзаца <a target="blank" href="https://www.kubsu.ru">ссылка</a> на сайт кубгу</p></li>
+                    
+                    <li class="content"><p>Ссылка-изображение: 
+                            <a target="blank" href="https://www.kubsu.ru"> 
+                                <div>
+                                    <img class="img-link1" src="img/kubgu_logo.png" alt="logo not found">
+                                </div>
+                            </a>
+                        </p>
+                    </li>
+                   
+                    <li>
+                        <p class="content">ссылки из прямоугольных и круглых областей картинки (HTML-тег map):</p>
+                       <div class="content">
+                        <map name="Navigation">
+
+                            <area shape="circle" coords="300,225,55" target="_blank" href="https://hr.wikipedia.org/wiki/Kritosjemenja%C4%8De" alt="rote not found">
+                           
+                            <area shape="rect" coords="0,0,600,60"  target="_blank" href="https://ru.wikipedia.org/wiki/%D0%91%D0%BE%D0%BA%D0%B5" alt="rote not found">
+                            <area shape="rect" coords="0,0,150,450"  target="_blank" href="https://ru.wikipedia.org/wiki/%D0%91%D0%BE%D0%BA%D0%B5" alt="rote not found">
+                            <area shape="rect" coords="400,0,600,450"  target="_blank" href="https://ru.wikipedia.org/wiki/%D0%91%D0%BE%D0%BA%D0%B5" alt="rote not found">
+                            <area shape="rect" coords="0,390,600,450"  target="_blank" href="https://ru.wikipedia.org/wiki/%D0%91%D0%BE%D0%BA%D0%B5" alt="rote not found">           
+                        </map>
+                        
+                        <img class="img-link2" src="img/image.jpg" alt="image not load" usemap="#Navigation"> 
+                        </div>
+                    </li>
+                    <li class="content"><p>Относительная на страницу в текущем каталоге: <a target="_blank" href="file1.html">Ссылка</a></p></li>
+                    <li class="content"><p>Относительная на страницу в каталоге about: <a target="_blank" href="about/file2.html">Ссылка</a></p></li>
+                    <li class="content"><p>Относительная на страницу в каталоге выше текущего: <a target="_blank" href="../file3.html">Ссылка</a></p></li>
+                    <li class="content"><p>Относительная на страницу в каталоге двумя уровнями выше: <a target="_blank" href="../../file4.html">Ссылка</a></p></li>
+                </ol>
+            </div>
+        
+        <div class="crossline">
+            <div class="left-line">
+            </div>
+            <div style="text-align: center;">
+                <p>Блок с таблицей</p>
+            </div>
+            <div class="right-line">
+            </div>
+        </div>
+        
+        <div class="posit-table">
+            <div class="table-place">
+                <table>
+                    <tbody>
+                        <tr>
+                            <th>колонка 1</th>
+                            <th>колонка 2</th>
+                            <th>колонка 2</th>
+                        </tr>
+                        <tr>
+                            <td>Ячейка 11</td>
+                            <td>Ячейка 12</td>
+                            <td>Ячейка 13</td>
+                        </tr>
+                        <tr>
+                            <td>Ячейка 11</td>
+                            <td colspan="2">Ячейка 12, объединенная с 13</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        
+        <div class="crossline">
+            <div class="left-line">
+            </div>
+            <div style="text-align: center;">
+                <p>Блок с формой</p>
+            </div>
+            <div class="right-line">
+            </div>
+        </div>
+    
+        
+    <form class="form-block" action="#" method="POST">
+        
+    <fieldset>
+        <p><input placeholder="Имя" type="text" name="usertext" required></p>
+        <p><input placeholder="email" type="email" name="useremail" required></p>
+    
+        <p>Дата рождения</p>
+        <p><input type="date" name="userdate" required></p>
+    
+        <p>Укажите ваш пол </p>
+        <p><input checked type="radio" name="usergender"> Мужской</p>
+        <p><input type="radio" name="usergender"> Женский</p>
+    
+        <p>Количество конечностей</p>
+        <p><input type="radio" name="limbs"> 2 </p>
+        <p><input type="radio" name="limbs"> 3 </p>
+        <p><input checked type="radio" name="limbs"> 4</p>
+        
+        <p>Сверхспособности </p>
+        <select>
+            <option>бессмертие</option>
+            <option>прохождение сквозь стены</option>
+            <option>левитация</option>
+        </select>
+
+        <p>биография (многострочное текстовое поле) </p>
+        <p><textarea cols="30" rows="10" name="userbiography"></textarea><p>
+        <p>с контрактом ознакомлен <input type="checkbox" required>(a)</p>
+    
+        <p> <input type="submit" value="Отправить"> </p>
+    </fieldset>
+
+    </form>
+
+
+    <footer>
+            <p> (c) Онуков Иван 2021</p>
+    </footer>
+
+</body>
+</html>
