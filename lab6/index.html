@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>lab6</title>
+    <style>
+        body {
+            background-color: black;
+        }
+
+        p {
+            color: blanchedalmond;
+        }
+    </style>
+</head>
+
+<body>
+    <label>
+        <input placeholder="Цена" type="number" id="products">
+        <input placeholder="Количество" type="number" id="cost">
+    </label>
+
+    <div>
+        <select name="тип" id="list">
+            <option value="type1"> тип 1 </option>
+            <option value="type2"> тип 2 </option>
+            <option value="type3"> тип 3 </option>
+            <option value="type4"> тип 4 </option>
+        </select>
+    </div>
+
+    <div>
+        <form action="#" id="option"></form>
+        <p>опции:</p>
+        <input type="radio" value="optionStandart"> стандарт <br>
+        <input type="radio" value="optionStandartPlus"> продвинутый <br>
+        <input type="radio" value="optionPro"> профисиональный <br>
+        </form>
+    </div>
+
+    <div>
+        <form action="#" id="properties">
+            <p>свойства</p>
+            <input type="checkbox" value="properties1"> свойство 1 <br>
+            <input type="checkbox" value="properties2"> свойство 2 <br>
+            <input type="checkbox" value="properties3"> свойство 3 <br>
+        </form>
+    </div>
+
+
+    <div>
+        <button onclick="sumPurchase()">Сумма</button>
+        <p>Итоговая стоймость: <span id="outResult"></span> </p>
+
+    </div>
+
+    <button id="test">boom</button>
+    <div id="rel"style=" background-color: red;"></div>
+
+    <script src="scriptCalculator.js"></script>
+        
+</body>
+
+</html>
