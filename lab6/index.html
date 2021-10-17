@@ -1,68 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/js/bootstrap.min.js" integrity="sha384-PsUw7Xwds7x08Ew3exXhqzbhuEYmA2xnwc8BuD6SEr+UmEHlX8/MCltYEodzWA4u" crossorigin="anonymous"></script>
+    <script src="main.js" defer></script>
     <title>lab6</title>
     <style>
-        body {
-            background-color: black;
+        .row {
+            margin-left: 0px;
+            margin-right: 0px;
         }
-
-        p {
+        body{
+            background-color: black;
+            height: 100%;
             color: blanchedalmond;
         }
     </style>
 </head>
-
-<body>
-    <label>
-        <input placeholder="Цена" type="number" id="products">
-        <input placeholder="Количество" type="number" id="cost">
-    </label>
-
-    <div>
-        <select name="тип" id="list">
-            <option value="type1"> тип 1 </option>
-            <option value="type2"> тип 2 </option>
-            <option value="type3"> тип 3 </option>
-            <option value="type4"> тип 4 </option>
-        </select>
+<body style="padding: 20px;">
+    <div class="row">
+        <div>
+            <form>
+                <input  type="number" placeholder="Количество товара" id="count"> <br>
+                <select  name="prodType">
+                    <option disabled>Тип товара</option>
+                    <option value="1">Тип 1</option>
+                    <option value="2">Тип 2</option>
+                    <option value="3">Тип 3</option>
+                </select> <br>
+                <div class="options">
+                    <p><input name="opt" class="radio mb-3 mr-2" type="radio" value="1">Опция 1</p>
+                    <p><input name="opt" class="radio mr-2" type="radio" value="2">Опция 2</p>
+                </div>
+                <div class="properties">
+                    <p><input name="1" class="checkbox mb-3 mr-2" type="checkbox">Свойство 1</p>
+                    <p><input name="2" class="checkbox mr-2" type="checkbox">Свойство 2</p>
+                </div>
+                <button  type="button" id="calculate">Посчитать</button>
+            </form>
+        </div>
+        <div class="col-12 pl-0">
+            Итоговая стоимость: <p class="result d-inline"></p>
+        </div>
     </div>
-
-    <div>
-        <form action="#" id="option"></form>
-        <p>опции:</p>
-        <input type="radio" value="optionStandart"> стандарт <br>
-        <input type="radio" value="optionStandartPlus"> продвинутый <br>
-        <input type="radio" value="optionPro"> профисиональный <br>
-        </form>
-    </div>
-
-    <div>
-        <form action="#" id="properties">
-            <p>свойства</p>
-            <input type="checkbox" value="properties1"> свойство 1 <br>
-            <input type="checkbox" value="properties2"> свойство 2 <br>
-            <input type="checkbox" value="properties3"> свойство 3 <br>
-        </form>
-    </div>
-
-
-    <div>
-        <button onclick="sumPurchase()">Сумма</button>
-        <p>Итоговая стоймость: <span id="outResult"></span> </p>
-
-    </div>
-
-    <button id="test">boom</button>
-    <div id="rel"style=" background-color: red;"></div>
-
-    <script src="scriptCalculator.js"></script>
-        
 </body>
-
 </html>
