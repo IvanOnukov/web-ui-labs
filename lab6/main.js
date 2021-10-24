@@ -1,3 +1,6 @@
+
+
+
 function selectType(sel) {
   let radioDiv = document.querySelector(".options");
   let checkDiv = document.querySelector(".properties");
