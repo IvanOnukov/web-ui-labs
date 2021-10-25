@@ -57,7 +57,7 @@ body{
 
 @media (min-width: 1024px) {
   .slider{
-    max-width: 1024;
+    max-width: 1024px;
   }
   .photo{
     max-width: 256px;
