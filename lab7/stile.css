@@ -6,25 +6,61 @@
 body{
   margin: 0;
   padding: 0;
-  background-color: black;
+  background-color: rgb(89, 15, 92);
   height: 100%;
+} 
+
+.slick-track {
+  display: flex;
 }
 
-.wraper{
-  max-width: 1024px;
-  margin: 0 auto;
-}
-.slider-container{
+.slick-list {
   overflow: hidden;
 }
-.slider-track{
+
+.slider{
   display: flex;
-  transition: .2s;
+  max-width: 80%;
+  margin: 0 auto;
+  padding: 0 50px;
+  position: relative;
+  /* margin: 0 auto; */
 }
-.slider-items img{
-  max-width: 256px;
+ 
+
+
+.photo {
+  display: flex;
+  max-width: 128px;
   
+    
 }
-.slider-button{
-  text-align: center;
+
+.slider .slick-arrow:hover {
+  cursor: pointer;
+}
+
+
+.slider .slick-dots {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.slick-dots{
+  color: beiges;
+}
+.slider .slick-dots li {
+  list-style: none;
+  margin: 0px 10px;
+}
+
+
+@media (min-width: 1024px) {
+  .slider{
+    max-width: 1024;
+  }
+  .photo{
+    max-width: 256px;
+  }
+  
 }
