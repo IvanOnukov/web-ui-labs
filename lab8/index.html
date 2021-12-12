@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>lab#8</title>
+</head>
+
+<body>
+    <div class="main_page">
+        <button id="show">Форма</button>
+    </div>
+
+    <div class="popup_container">
+        <form  class="ajaxForm" action="https://formcarry.com/s/uQdIE5W1Qrx" accept-charset="UTF-8" target="frame">
+            <div class="popup_content">
+                <button id="hide"><img id="close_bt" src="image/pngwing.com.png" alt="not load"></button>
+                <div>
+                    <input type="text" placeholder="Имя" name="firstname" required>
+                </div>
+                <div>
+                    <input type="email" placeholder="почта" name="email" required>
+                </div>
+                <div>
+                    <input type="text" placeholder="коментарий" name="coment">
+                </div>
+
+                <button id="onSubmit"  type="submit">отправить</button>
+            </div>
+        </form>
+    </div>
+
+<iframe name="frame" style="display: none;"></iframe>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
