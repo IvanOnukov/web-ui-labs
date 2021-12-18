@@ -37,6 +37,10 @@
     left: 195px;
 }
 
+#onSubmit{
+    display: block;
+}
+
 .privacy_policy{
     display: flex;
 }

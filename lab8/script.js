@@ -3,26 +3,40 @@
 $("#show").click(function (e) {
     e.preventDefault();
     $(".popup_container").fadeIn(450);
-    // window.history.pushState({ page: 1 }, "titel1", "index.html")
 
-  
-    window.history.pushState({ page: 1 }, "", "new_url.html")
+    window.history.replaceState({ page: 2 }, "", "new_url.html")
     console.log(window.history.length);
 
 });
 
+
+
 function hidePopup(e) {
     e.preventDefault();
     $(".popup_container").fadeOut(450);
-    //window.history.back();
-   
-    window.history.pushState({ page: 1 }, "", "index.html")
+
+    window.history.back();
+    window.history.replaceState({ page: 1 }, "", "index.html");
+    console.log(window.history.length);
 }
+
+// $("#scales").click(function (e) {
+//     let status = document.querySelectorAll('#scales');
+//     if (status.checked === true) {
+//         $('#onSubmit')[0] = 'block';
+//     } else {
+//         $('#onSubmit')[0] = 'none';
+//     }
+
+// });
 
 $("#hide").click(function (e) {
     e.preventDefault();
     $(".popup_container").fadeOut(450);
-    window.history.pushState({ page: 1 }, "", "index.html")
+
+    window.history.back();
+    window.history.replaceState({ page: 1 }, "", "index.html");
+    console.log(window.history.length);
 });
 
 
@@ -54,7 +68,6 @@ $(function () {
                     alert("произошла ошибка при отпровлении: " + response.message);
                 }
                 hidePopup(e);
-                // window.history.back();
             }
 
         });
