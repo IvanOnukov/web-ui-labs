@@ -20,6 +20,7 @@ $("#hide").click(function (e) {
     window.history.back();
 });
 
+
 $(function () {
 
     $(".ajaxForm").submit(function (e) {
@@ -48,7 +49,6 @@ $(function () {
                     alert("произошла ошибка при отпровлении: " + response.message);
                 }
                 hidePopup();
-                window.history.back();
             }
 
         });
@@ -60,3 +60,4 @@ $(function () {
 $(window).on("popstate", function () {
     hidePopup();
 });
+
