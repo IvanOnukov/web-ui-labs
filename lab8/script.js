@@ -2,7 +2,7 @@ $("#show").click(function (e) {
     e.preventDefault();
     $(".popup_container").fadeIn(450);
 
-    history.pushState({ page: 1 }, "page 1", "new-URL.html")
+    history.pushState({ page: 1 }, "page 1", "/new_url.html")
     console.log(window.history.length);
 
 });
