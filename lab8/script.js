@@ -57,7 +57,7 @@ $(function () {
 
 });
 
-$(window).on("popstate", function () {
-    hidePopup();
-});
+// $(window).on("popstate", function () {
+//     hidePopup();
+// });
 
