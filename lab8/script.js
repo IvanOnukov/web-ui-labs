@@ -1,8 +1,9 @@
+history.pushState({page: 1}, "titel1", "/index.html")
 $("#show").click(function (e) {
     e.preventDefault();
     $(".popup_container").fadeIn(450);
 
-    history.pushState({ page: 1 }, "page 1", "/new_url.html")
+    history.pushState({ page: 2 }, "titel2", "/new_url.html")
     console.log(window.history.length);
 
 });
