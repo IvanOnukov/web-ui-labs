@@ -1,10 +1,10 @@
-history.pushState({page: 1}, "titel1", "/web-ui-labs/lab8/index.html")
+
 $("#show").click(function (e) {
     e.preventDefault();
     $(".popup_container").fadeIn(450);
+    // window.history.pushState({ page: 1 }, "titel1", "index.html")
 
-    
-    history.pushState({ page: 2 }, "titel2" , "/web-ui-labs/lab8/new_url.html")
+    window.history.pushState({ page: 2 }, "titel2", "new_url.html")
     console.log(window.history.length);
 
 });
@@ -18,9 +18,7 @@ $("#hide").click(function (e) {
     e.preventDefault();
     $(".popup_container").fadeOut(450);
     window.history.back();
-
 });
-
 
 $(function () {
 
@@ -47,11 +45,10 @@ $(function () {
                     alert("мы получили вашу заявку");
                 } else {
 
-                    alert("произошла ошибка при отпровлении: " + response.message);  
+                    alert("произошла ошибка при отпровлении: " + response.message);
                 }
-                hidePopup(); 
+                hidePopup();
                 window.history.back();
-
             }
 
         });
@@ -60,10 +57,6 @@ $(function () {
 
 });
 
-
 $(window).on("popstate", function () {
     hidePopup();
 });
-
-
-$('.ajaxForm').saveStorage();
