@@ -1,9 +1,10 @@
-history.pushState({page: 1}, "titel1", "/index.html")
+history.pushState({page: 1}, "/web_ui-labs/lab8/index.html")
 $("#show").click(function (e) {
     e.preventDefault();
     $(".popup_container").fadeIn(450);
 
-    history.pushState({ page: 2 }, "titel2", "/new_url.html")
+    
+    history.pushState({ page: 2 }, "/web_ui-labs/lab8/new_url.html")
     console.log(window.history.length);
 
 });
@@ -22,43 +23,43 @@ $("#hide").click(function (e) {
 });
 
 
-$(function () {
+// $(function () {
 
-    $(".ajaxForm").submit(function (e) {
+//     $(".ajaxForm").submit(function (e) {
 
-        e.preventDefault();
+//         e.preventDefault();
 
-        var href = $(this).attr("action");
+//         var href = $(this).attr("action");
 
-        $.ajax({
+//         $.ajax({
 
-            type: "POST",
+//             type: "POST",
 
-            dataType: "json",
+//             dataType: "json",
 
-            url: href,
+//             url: href,
 
-            data: $(this).serialize(),
+//             data: $(this).serialize(),
 
-            success: function (response) {
+//             success: function (response) {
 
-                if (response.status == "success") {
+//                 if (response.status == "success") {
 
-                    alert("мы получили вашу заявку");
-                } else {
+//                     alert("мы получили вашу заявку");
+//                 } else {
 
-                    alert("произошла ошибка при отпровлении: " + response.message);  
-                }
-                hidePopup(); 
-                window.history.back();
+//                     alert("произошла ошибка при отпровлении: " + response.message);  
+//                 }
+//                 hidePopup(); 
+//                 window.history.back();
 
-            }
+//             }
 
-        });
+//         });
 
-    });
+//     });
 
-});
+// });
 
 
 $(window).on("popstate", function () {
