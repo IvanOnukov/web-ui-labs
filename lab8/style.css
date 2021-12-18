@@ -15,7 +15,7 @@
 
 .popup_content{
     position: absolute;
-    max-width: 220px;
+    max-width: 330px;
     max-height: 120px;
     top: 0;
     right: 0;
@@ -37,6 +37,12 @@
     left: 195px;
 }
 
+.privacy_policy{
+    display: flex;
+}
+.text_priv_pol{
+    color: darkturquoise;
+}
 #close_bt{
     max-width: 15px;
 }
