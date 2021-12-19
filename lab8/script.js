@@ -1,83 +1,130 @@
-//let = url = "/web_ui-labs/lab8/";
+$(document).ready(function () {
 
-$("#show").click(function (e) {
-    e.preventDefault();
-    $(".popup_container").fadeIn(450);
+    let = url = window.location.protocol + "//" + window.location.host + window.location.pathname + 'index.html';
+    let name;
+    let email;
 
-    window.history.replaceState({ page: 2 }, "", "new_url.html")
-    console.log(window.history.length);
+    // window.history.pushState({ path: url }, "mian", url);
 
-});
+    // window.history.pushState({ page: 1 }, "main", "index.html");
 
-
-
-function hidePopup(e) {
-    e.preventDefault();
-    $(".popup_container").fadeOut(450);
-
-    window.history.back();
-    window.history.replaceState({ page: 1 }, "", "index.html");
-    console.log(window.history.length);
-}
-
-// $("#scales").click(function (e) {
-//     let status = document.querySelectorAll('#scales');
-//     if (status.checked === true) {
-//         $('#onSubmit')[0] = 'block';
-//     } else {
-//         $('#onSubmit')[0] = 'none';
-//     }
-
-// });
-
-$("#hide").click(function (e) {
-    e.preventDefault();
-    $(".popup_container").fadeOut(450);
-
-    window.history.back();
-    window.history.replaceState({ page: 1 }, "", "index.html");
-    console.log(window.history.length);
-});
-
-
-$(function () {
-
-    $(".ajaxForm").submit(function (e) {
-
+    $("#show").click(function (e) {
         e.preventDefault();
+        $(".popup_container").fadeIn(450);
 
-        var href = $(this).attr("action");
+        let newurl = window.location.protocol + "//" + window.location.host + window.location.pathname + 'new_url.html';
+        console.log(newurl);
 
-        $.ajax({
+        // window.history.pushState({ path: newurl }, '', newurl);
 
-            type: "POST",
+        window.history.pushState({ page: 2 }, '', "new_url.html");
+        console.log(window.history.length);
 
-            dataType: "json",
+    });
 
-            url: href,
+    $("#scales").click(function (e) {
+        let status = $('#scales').prop('checked');
+        console.log(status);
 
-            data: $(this).serialize(),
+        if (status) {
+            $("#onSubmit").css("display", "block");
+        }
+        else {
+            $("#onSubmit").css("display", "none");
+        }
 
-            success: function (response) {
+    });
 
-                if (response.status == "success") {
 
-                    alert("мы получили вашу заявку");
-                } else {
 
-                    alert("произошла ошибка при отпровлении: " + response.message);
+    let hidePopup = function (e) {
+        e.preventDefault();
+        $(".popup_container").fadeOut(450);
+        window.history.back();
+
+        if (window.history.state == null) {
+            // window.history.pushState({ path: url }, "main", url);
+
+            window.history.pushState({ page: 1 }, '', "index.html");
+        }
+
+        console.log(history.state);
+        console.log(window.history.length);
+    }
+
+    $("#hide").click(function (e) {
+        hidePopup(e);
+    });
+
+
+
+
+    $(function () {
+
+        $(".ajaxForm").submit(function (e) {
+
+            e.preventDefault();
+
+            var href = $(this).attr("action");
+
+            $.ajax({
+
+                type: "POST",
+
+                dataType: "json",
+
+                url: href,
+
+                data: $(this).serialize(),
+
+                success: function (response) {
+
+                    if (response.status == "success") {
+
+                        alert("мы получили вашу заявку");
+                        hidePopup(e);
+                    } else {
+
+                        alert("произошла ошибка при отпровлении: " + response.message);
+                        hidePopup(e);
+                    }
+
                 }
-                hidePopup(e);
-            }
+
+            });
 
         });
 
     });
 
-});
 
 
-$(window).on("popstate", function () {
-    hidePopup(e);
-});
+    $(window).bind('beforeunload', function (e) {
+        hidePopup(e);
+        name = $("#name").val();
+        email = $("#email").val();
 
+
+        return "Do you really want to leave now?";
+
+    });
+
+    const pageAccessedByReload = (
+        (window.performance.navigation && window.performance.navigation.type === 1) ||
+        window.performance
+            .getEntriesByType('navigation')
+            .map((nav) => nav.type)
+            .includes('reload')
+    );
+
+
+
+    $(window).bind("popstate", function (e) {
+
+        hidePopup(e);
+
+        // alert(pageAccessedByReload);
+        console.log("location: " + document.location + ", state: " + JSON.stringify(e.state));
+    });
+
+})
